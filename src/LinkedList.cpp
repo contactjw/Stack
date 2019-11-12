@@ -107,6 +107,7 @@ void LinkedList::delete_list() {
 		temp = head;
 		head = head->next;
 		delete temp->data;
+		delete temp->next;
 		delete temp;
 		temp = nullptr;
 	}
@@ -300,4 +301,5 @@ bool LinkedList::deleteIt(int ID) {
 LinkedList::~LinkedList() {
 	delete_list();
 }
+
 

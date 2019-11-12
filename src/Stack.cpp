@@ -53,6 +53,7 @@ void Stack::pop() {
 		node* temp;
 		temp = head;
 		head = head->next;
+		delete temp->data;
 		delete temp;
 	}
 }
@@ -107,3 +108,4 @@ bool Stack::isFull() {
 Stack::~Stack() {
 
 }
+
