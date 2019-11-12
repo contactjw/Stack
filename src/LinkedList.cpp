@@ -106,6 +106,7 @@ void LinkedList::delete_list() {
 	while (head != nullptr) {
 		temp = head;
 		head = head->next;
+		delete temp->data;
 		delete temp;
 		temp = nullptr;
 	}
