@@ -13,8 +13,7 @@ int main() {
 
 	try {
 		myStack->pop();
-	}
-	catch(const char *errorMess) {
+	} catch (const char *errorMess) {
 		cout << errorMess << endl;
 	}
 
@@ -23,24 +22,21 @@ int main() {
 		newCust->setID(i);
 		try {
 			myStack->push(newCust);
-		}
-		catch (const char *errorMess) {
+		} catch (const char *errorMess) {
 			cout << errorMess << endl;
 		}
 	}
 
-	if(myStack->isFull()) {
+	if (myStack->isFull()) {
 		cout << "Stack is confirmed to be full." << endl;
 	}
-
 
 	for (int i = 1; i < 5; i++) {
 		try {
 			cout << myStack->top()->getID();
 			myStack->pop();
 			cout << endl;
-		}
-		catch (const char *error) {
+		} catch (const char *error) {
 			cout << error << endl;
 		}
 	}
@@ -52,11 +48,9 @@ int main() {
 
 	try {
 		myStack->pop();
-	}
-	catch(const char *errorMess) {
+	} catch (const char *errorMess) {
 		cout << errorMess << endl;
 	}
-
 
 	return 0;
 }

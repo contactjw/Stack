@@ -302,4 +302,3 @@ LinkedList::~LinkedList() {
 	delete_list();
 }
 
-

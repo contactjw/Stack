@@ -19,7 +19,7 @@ Stack::Stack() {
 // 	- maxSize is now set to the inputSize.
 Stack::Stack(int x) {
 	if (x <= 0)
-		throw x; // May need to check this.
+		throw "Size cannot be less than 1.";
 	maxSize = x;
 }
 
@@ -67,12 +67,10 @@ void Stack::pop() {
 // 	- Returns the top Customer of the stack.
 //  - Throws an exception if the stack is empty.
 Customer* Stack::top() {
-	node* current = head;
 	if (head == nullptr) {
 		throw "Stack is empty.";
-	}
-	else {
-		return current->data;
+	} else {
+		return head->data;
 	}
 }
 
